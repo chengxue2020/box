@@ -89,9 +89,9 @@ public class VodController extends BaseController {
                         // LOG.d("1003 disPlay = " + disPlay);
                         int visible = disPlay ? VISIBLE : GONE;
                         mTopRoot2.setVisibility(visible);
-                        mSeekTime.setVisibility(visible);
-                        mPlayLoadNetSpeedRightBottom.setVisibility(visible);
-                        mBottomSeekBar.setVisibility(VISIBLE);
+                        // mSeekTime.setVisibility(visible);
+                        // mPlayLoadNetSpeedRightBottom.setVisibility(visible);
+                        mBottomSeekBar.setVisibility(visible);
                         break;
                     }
                     case 1004: { // 设置速度
@@ -252,10 +252,10 @@ public class VodController extends BaseController {
                 disPlay = Hawk.get(HawkConfig.SCREEN_DISPLAY, false);
                 int visible = !disPlay ? GONE : VISIBLE;
                 mTopRoot2.setVisibility(visible);
-                mSeekTime.setVisibility(visible);
-                mPlayLoadNetSpeedRightBottom.setVisibility(visible);
+                // mSeekTime.setVisibility(visible);
+                // mPlayLoadNetSpeedRightBottom.setVisibility(visible);
                 mBottomRoot.setVisibility(GONE);
-                mBottomSeekBar.setVisibility(VISIBLE);
+                mBottomSeekBar.setVisibility(visible);
                 mHandler.removeCallbacks(myRunnable);
                 ((DetailActivity) mActivity).toggleFullPreview();
             } else {
@@ -620,8 +620,9 @@ public class VodController extends BaseController {
         disPlay = Hawk.get(HawkConfig.SCREEN_DISPLAY, false);
         int visible = !disPlay ? GONE : VISIBLE;
         mTopRoot2.setVisibility(visible);
-        mSeekTime.setVisibility(visible);
-        mPlayLoadNetSpeedRightBottom.setVisibility(visible);
+        // mSeekTime.setVisibility(visible);
+        // mPlayLoadNetSpeedRightBottom.setVisibility(visible);
+        mBottomSeekBar.setVisibility(visible);
         mScreenDisplayImg.setImageResource(disPlay ? R.drawable.v_info_display_select : R.drawable.v_info_display);
         mScreenDisplay.setOnClickListener(view -> {
             disPlay = !Hawk.get(HawkConfig.SCREEN_DISPLAY, false);
@@ -930,8 +931,9 @@ public class VodController extends BaseController {
                 disPlay = Hawk.get(HawkConfig.SCREEN_DISPLAY, false);
                 int visible = disPlay ? VISIBLE : GONE;
                 mTopRoot2.setVisibility(visible);
-                mSeekTime.setVisibility(visible);
-                mPlayLoadNetSpeedRightBottom.setVisibility(visible);
+                // mSeekTime.setVisibility(visible);
+                // mPlayLoadNetSpeedRightBottom.setVisibility(visible);
+                mBottomSeekBar.setVisibility(visible);
                 // mTopRoot2.setVisibility(GONE);
                 mPlayTitle.setVisibility(VISIBLE);
                 break;
